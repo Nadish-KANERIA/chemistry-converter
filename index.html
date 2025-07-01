@@ -424,204 +424,95 @@
                     </div>
                 </div>
             </div>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>🎯 Accurate</h3>
+                    <p>Precise calculations using standard conversion factors</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Fast</h3>
+                    <p>Instant conversions as you type</p>
+                </div>
+                <div class="feature">
+                    <h3>📱 Responsive</h3>
+                    <p>Works on desktop, tablet, and mobile</p>
+                </div>
+                <div class="feature">
+                    <h3>🧪 Stoichiometry</h3>
+                    <p>Advanced limiting reactant calculations</p>
+                </div>
+            </div>
         </div>
         
         <!-- Limiting Reactant Tab -->
         <div id="limiting-reactant" class="tab-content">
             <div class="converter-section">
                 <h2 class="section-title limiting-title">Limiting Reactant Calculator</h2>
-            <div class="reactant-inputs">
-                <div class="reactant-card">
-                    <h3 class="reactant-title">Reactant A</h3>
-                    <div class="input-group">
-                        <label for="reactant-a-name">Chemical Formula</label>
-                        <input type="text" id="reactant-a-name" placeholder="e.g., H2SO4" value="H2SO4">
+                <div class="reactant-inputs">
+                    <div class="reactant-card">
+                        <h3 class="reactant-title">Reactant A</h3>
+                        <div class="input-group">
+                            <label for="reactant-a-name">Chemical Formula</label>
+                            <input type="text" id="reactant-a-name" placeholder="e.g., H2SO4" value="H2SO4">
+                        </div>
+                        <div class="input-group">
+                            <label for="reactant-a-mw">Molecular Weight (g/mol)</label>
+                            <input type="number" id="reactant-a-mw" placeholder="Enter MW" step="0.01" value="98.08">
+                        </div>
+                        <div class="input-group">
+                            <label for="reactant-a-coeff">Stoichiometric Coefficient</label>
+                            <input type="number" id="reactant-a-coeff" placeholder="Coefficient" value="1" min="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="reactant-a-amount">Amount Available (g)</label>
+                            <input type="number" id="reactant-a-amount" placeholder="Enter amount" step="0.01">
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <label for="reactant-a-mw">Molecular Weight (g/mol)</label>
-                        <input type="number" id="reactant-a-mw" placeholder="Enter MW" step="0.01" value="98.08">
+                    
+                    <div class="reactant-card">
+                        <h3 class="reactant-title">Reactant B</h3>
+                        <div class="input-group">
+                            <label for="reactant-b-name">Chemical Formula</label>
+                            <input type="text" id="reactant-b-name" placeholder="e.g., NaOH" value="NaOH">
+                        </div>
+                        <div class="input-group">
+                            <label for="reactant-b-mw">Molecular Weight (g/mol)</label>
+                            <input type="number" id="reactant-b-mw" placeholder="Enter MW" step="0.01" value="40.00">
+                        </div>
+                        <div class="input-group">
+                            <label for="reactant-b-coeff">Stoichiometric Coefficient</label>
+                            <input type="number" id="reactant-b-coeff" placeholder="Coefficient" value="2" min="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="reactant-b-amount">Amount Available (g)</label>
+                            <input type="number" id="reactant-b-amount" placeholder="Enter amount" step="0.01">
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <label for="reactant-a-coeff">Stoichiometric Coefficient</label>
-                        <input type="number" id="reactant-a-coeff" placeholder="Coefficient" value="1" min="1">
-                    </div>
-                    <div class="input-group">
-                        <label for="reactant-a-amount">Amount Available (g)</label>
-                        <input type="number" id="reactant-a-amount" placeholder="Enter amount" step="0.01">
+                    
+                    <div class="reactant-card">
+                        <h3 class="reactant-title">Product</h3>
+                        <div class="input-group">
+                            <label for="product-name">Chemical Formula</label>
+                            <input type="text" id="product-name" placeholder="e.g., Na2SO4" value="Na2SO4">
+                        </div>
+                        <div class="input-group">
+                            <label for="product-mw">Molecular Weight (g/mol)</label>
+                            <input type="number" id="product-mw" placeholder="Enter MW" step="0.01" value="142.04">
+                        </div>
+                        <div class="input-group">
+                            <label for="product-coeff">Stoichiometric Coefficient</label>
+                            <input type="number" id="product-coeff" placeholder="Coefficient" value="1" min="1">
+                        </div>
                     </div>
                 </div>
                 
-                <div class="reactant-card">
-                    <h3 class="reactant-title">Reactant B</h3>
-                    <div class="input-group">
-                        <label for="reactant-b-name">Chemical Formula</label>
-                        <input type="text" id="reactant-b-name" placeholder="e.g., NaOH" value="NaOH">
-                    </div>
-                    <div class="input-group">
-                        <label for="reactant-b-mw">Molecular Weight (g/mol)</label>
-                        <input type="number" id="reactant-b-mw" placeholder="Enter MW" step="0.01" value="40.00">
-                    </div>
-                    <div class="input-group">
-                        <label for="reactant-b-coeff">Stoichiometric Coefficient</label>
-                        <input type="number" id="reactant-b-coeff" placeholder="Coefficient" value="2" min="1">
-                    </div>
-                    <div class="input-group">
-                        <label for="reactant-b-amount">Amount Available (g)</label>
-                        <input type="number" id="reactant-b-amount" placeholder="Enter amount" step="0.01">
-                    </div>
-                </div>
+                <button class="calculate-btn" onclick="calculateLimitingReactant()">Calculate Limiting Reactant</button>
                 
-                <div class="reactant-card">
-                    <h3 class="reactant-title">Product</h3>
-                    <div class="input-group">
-                        <label for="product-name">Chemical Formula</label>
-                        <input type="text" id="product-name" placeholder="e.g., Na2SO4" value="Na2SO4">
-                    </div>
-                    <div class="input-group">
-                        <label for="product-mw">Molecular Weight (g/mol)</label>
-                        <input type="number" id="product-mw" placeholder="Enter MW" step="0.01" value="142.04">
-                    </div>
-                    <div class="input-group">
-                        <label for="product-coeff">Stoichiometric Coefficient</label>
-                        <input type="number" id="product-coeff" placeholder="Coefficient" value="1" min="1">
-                    </div>
+                <div id="limiting-results" class="limiting-results" style="display: none;">
+                    <h3>Results</h3>
+                    <div id="results-content"></div>
                 </div>
-            </div>
-            
-            <button class="calculate-btn" onclick="calculateLimitingReactant()">Calculate Limiting Reactant</button>
-            
-            <div id="limiting-results" class="limiting-results" style="display: none;">
-                <h3>Results</h3>
-                <div id="results-content"></div>
-            </div>
-        </div>
-        
-        <div class="converter-section">
-            <h2 class="section-title">Concentration Converter</h2>
-            <div class="converter-row">
-                <div class="input-group">
-                    <label for="conc-input">Value</label>
-                    <input type="number" id="conc-input" placeholder="Enter value" step="any">
-                </div>
-                <button class="swap-button" onclick="swapConcUnits()" title="Swap units">⇄</button>
-                <div class="input-group">
-                    <label for="conc-result">Result</label>
-                    <input type="number" id="conc-result" placeholder="Result" readonly>
-                </div>
-            </div>
-            <div class="converter-row">
-                <div class="input-group">
-                    <label for="conc-from">From</label>
-                    <select id="conc-from" onchange="convertConcentration()">
-                        <option value="molarity">Molarity (M)</option>
-                        <option value="normality">Normality (N)</option>
-                        <option value="ppm">Parts per million (ppm)</option>
-                        <option value="percent">Percent (%)</option>
-                        <option value="mgl">mg/L</option>
-                    </select>
-                </div>
-                <div></div>
-                <div class="input-group">
-                    <label for="conc-to">To</label>
-                    <select id="conc-to" onchange="convertConcentration()">
-                        <option value="normality">Normality (N)</option>
-                        <option value="molarity">Molarity (M)</option>
-                        <option value="ppm">Parts per million (ppm)</option>
-                        <option value="percent">Percent (%)</option>
-                        <option value="mgl">mg/L</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        
-        <div class="converter-section">
-            <h2 class="section-title">Pressure Converter</h2>
-            <div class="converter-row">
-                <div class="input-group">
-                    <label for="press-input">Value</label>
-                    <input type="number" id="press-input" placeholder="Enter value" step="any">
-                </div>
-                <button class="swap-button" onclick="swapPressUnits()" title="Swap units">⇄</button>
-                <div class="input-group">
-                    <label for="press-result">Result</label>
-                    <input type="number" id="press-result" placeholder="Result" readonly>
-                </div>
-            </div>
-            <div class="converter-row">
-                <div class="input-group">
-                    <label for="press-from">From</label>
-                    <select id="press-from" onchange="convertPressure()">
-                        <option value="atm">Atmosphere (atm)</option>
-                        <option value="torr">Torr</option>
-                        <option value="pa">Pascal (Pa)</option>
-                        <option value="psi">PSI</option>
-                        <option value="bar">Bar</option>
-                    </select>
-                </div>
-                <div></div>
-                <div class="input-group">
-                    <label for="press-to">To</label>
-                    <select id="press-to" onchange="convertPressure()">
-                        <option value="torr">Torr</option>
-                        <option value="atm">Atmosphere (atm)</option>
-                        <option value="pa">Pascal (Pa)</option>
-                        <option value="psi">PSI</option>
-                        <option value="bar">Bar</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        
-        <div class="converter-section">
-            <h2 class="section-title">Temperature Converter</h2>
-            <div class="converter-row">
-                <div class="input-group">
-                    <label for="temp-input">Value</label>
-                    <input type="number" id="temp-input" placeholder="Enter value" step="any">
-                </div>
-                <button class="swap-button" onclick="swapTempUnits()" title="Swap units">⇄</button>
-                <div class="input-group">
-                    <label for="temp-result">Result</label>
-                    <input type="number" id="temp-result" placeholder="Result" readonly>
-                </div>
-            </div>
-            <div class="converter-row">
-                <div class="input-group">
-                    <label for="temp-from">From</label>
-                    <select id="temp-from" onchange="convertTemperature()">
-                        <option value="celsius">Celsius (°C)</option>
-                        <option value="fahrenheit">Fahrenheit (°F)</option>
-                        <option value="kelvin">Kelvin (K)</option>
-                    </select>
-                </div>
-                <div></div>
-                <div class="input-group">
-                    <label for="temp-to">To</label>
-                    <select id="temp-to" onchange="convertTemperature()">
-                        <option value="fahrenheit">Fahrenheit (°F)</option>
-                        <option value="celsius">Celsius (°C)</option>
-                        <option value="kelvin">Kelvin (K)</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        
-        <div class="features">
-            <div class="feature">
-                <h3>🎯 Accurate</h3>
-                <p>Precise calculations using standard conversion factors</p>
-            </div>
-            <div class="feature">
-                <h3>⚡ Fast</h3>
-                <p>Instant conversions as you type</p>
-            </div>
-            <div class="feature">
-                <h3>📱 Responsive</h3>
-                <p>Works on desktop, tablet, and mobile</p>
-            </div>
-            <div class="feature">
-                <h3>🧪 Stoichiometry</h3>
-                <p>Advanced limiting reactant calculations</p>
             </div>
         </div>
     </div>
